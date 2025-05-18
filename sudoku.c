@@ -98,6 +98,7 @@ Node* DFS(Node* initial, int* cont)
   {
     Node* actual = top(stack);
     pop(stack);
+    (*cont)++;
     if (is_final(actual))
     {
       return actual;
