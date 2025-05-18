@@ -114,6 +114,7 @@ Node* DFS(Node* initial, int* cont)
     free(actual);
     free(adj);
   }
+  free(stack);
   return NULL;
 }
 
