@@ -40,3 +40,14 @@ Sun, May 18, 2025  5:07:46 PM:
  tests:  7|2
 total_score: 50/70
 2fe2845
+Sun, May 18, 2025  5:18:01 PM: 
+ sudoku.c | 32 ++++++++++++++++++++++++++++++--
+ 1 file changed, 30 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid':
+sudoku.c:103:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+a6fcbcc

@@ -69,9 +69,37 @@ int is_valid(Node* n)
         column[n->sudo[j][k]] = 1;
       }
     }
-  }  
-  
-  return 1;
+  }
+  for (int k = 0; k < 9 ; k+=3)
+  {
+    for (int j = 0 ; j < 9 ; j+=3)
+    {
+      int fila_aux [10] = {0};
+      int column_aux [10] = {0};
+      for (int i = 0; i < 3; i++)
+      {
+        for (int z = 0; z < 3 ; z++)
+        {
+          if (n->sudo[k+i][j+z] != 0)
+          {
+            if (fila_aux[n->sudo[k+i][j+z]] == 1)
+            {
+              return 0;
+            }
+            fila_aux[n->sudo[k+i][j+z]] = 1;
+          }
+          if (n->sudo[j+z][k+i] != 0)
+          {
+            if (column_aux[n->sudo[j+z][k+i]] == 1)
+            {
+              return 0;
+            }
+            column_aux[n->sudo[j+z][k+i]] = 1;
+          }
+        }
+      }
+    }
+  }
 }
 
 
